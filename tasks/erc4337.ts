@@ -86,17 +86,27 @@ task("erc4337ECDSA", "Sends a batched userOp", async (_, hre) => {
     myTokenVault
   );
 
+  const nonce = await entrypoint.read.getNonce([predictedAddress, 0n]);
   const userOp = {
     sender: predictedAddress,
-    nonce: await entrypoint.read.getNonce([predictedAddress, 0n]),
+    nonce,
     initCode: "0x" as Hex,
     callData: data,
     accountGasLimits: encodePacked(
       ["uint128", "uint128"],
-      [300_000n, 300_000n]
+      [
+        100_000n, // verificationGas
+        300_000n, // callGas
+      ]
     ),
-    preVerificationGas: 300_000n,
-    gasFees: encodePacked(["uint128", "uint128"], [300_000n, 300_000n]),
+    preVerificationGas: 0n,
+    gasFees: encodePacked(
+      ["uint128", "uint128"],
+      [
+        0n, // maxPriorityFeePerGas
+        0n, // maxFeePerGas
+      ]
+    ),
     paymasterAndData: "0x" as Hex,
     signature: "0x" as Hex,
   };
