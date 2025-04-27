@@ -18,6 +18,7 @@ This project demonstrates account abstraction implementations using [ERC-4337](h
   - `AccountERC7702.sol`: EIP-7702 compatible account
   - `MyToken.sol`: Sample ERC-20 token
   - `MyTokenVault.sol`: Token vault contract
+  - `PaymasterECDSASigner.sol`: Paymaster contract for gas sponsorship
 - `ignition/`: Hardhat Ignition deployment modules
 - `tasks/`: Hardhat tasks for testing account functionality
 - `utils/`: Utility functions and constants
@@ -98,6 +99,19 @@ This task demonstrates:
 - Creating an ECDSA-based smart account
 - Executing batched operations (e.g., minting, approving and depositing tokens)
 - Using the EntryPoint contract
+
+### ERC-4337 Account with Gas Sponsorship
+
+```bash
+npx hardhat erc4337ECDSASponsored --network sepolia
+```
+
+This task demonstrates:
+
+- Creating an ECDSA-based smart account
+- Deploying and funding a paymaster contract
+- Sponsoring transaction fees for account operations
+- Executing batched operations without the user needing ETH in their account
 
 ## Security Considerations
 
