@@ -4,5 +4,6 @@
   "MyTokenModule#MyToken": "0x8B978568AE98cC9b54D3D6AA1B890dCd620847Aa",
   "MyTokenVaultModule#MyTokenVault": "0x67d10e2827104cb3AfEc3A89Cc1eD8EE0D00Ec2a",
   "AccountERC7702Module#AccountERC7702": "0xa5C971FF70389480222aF19155602B6c29d9b4Ea",
-  "PaymasterECDSASignerModule#PaymasterECDSASigner": "0xA057a11abfC59e0CA85AF560E25492CF18dB57e0"
+  "PaymasterECDSASignerModule#PaymasterECDSASigner": "0xA057a11abfC59e0CA85AF560E25492CF18dB57e0",
+  "PaymasterUSDCChainlinkModule#PaymasterUSDCChainlink": "0xE83E4a6a169734e038A6fbC466D99964d0343277"
 }
