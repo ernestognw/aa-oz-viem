@@ -113,6 +113,19 @@ This task demonstrates:
 - Sponsoring transaction fees for account operations
 - Executing batched operations without the user needing ETH in their account
 
+### ERC-4337 Account with USDC Payment via Chainlink
+
+```bash
+npx hardhat erc4337USDCChainlink --network sepolia
+```
+
+This task demonstrates:
+
+- Creating an ECDSA-based smart account
+- Using USDC to pay for gas fees instead of ETH
+- Leveraging Chainlink price feeds to determine token-to-gas conversion rates
+- Executing batched operations with ERC-20 token payments for gas
+
 ## Security Considerations
 
 - Smart contract accounts should be thoroughly audited before use in production
